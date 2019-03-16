@@ -1,0 +1,68 @@
+//- Стандартный шаблон страницы
+include mixins.pug
+
+doctype html
+html(class='page  no-js', lang='ru')
+
+  head
+    meta(charset='utf-8')
+
+    block meta
+      title Home
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script.
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+
+    .page__inner
+      .page__content
+      
+        header.page-header
+          .page-header__container
+            a.logo(href='index.html') Book Store
+            p.open-time с 9:00 до 19:00
+            nav.main-navigation
+              button.burger.main-navigation__burger(area-label='Показать меню')
+              span
+              ul.main-navigation__list
+                li.main-navigation__item
+                  a(href='index.html') Книги
+                li.main-navigation__item.main-navigation_active
+                  a(href='recomendations.html') Рекомендации
+                li.main-navigation__item
+                  a(href='contacts.html') Контакты
+                li.main-navigation__item.main-navigation__phone
+                  a(href='tel:+78005008020')
+                    svg(width='24', height='24')
+                    span.main-navigation__phone-number +7 800 500-80-2
+            a.page-header__cart
+              svg(width='24', height='24')
+            
+        block content
+          p Cодержимое
+
+      .page__footer-wrapper
+        footer.page-footer
+          .page-footer__container
+            a.logo(href='index.html') Book Store
+            p.open-time с 9:00 до 19:00
+            nav.main-navigation
+              ul.main-navigation__list
+                li.main-navigation__item
+                  a(href='index.html') Книги
+                li.main-navigation__item.main-navigation_active
+                  a(href='recomendations.html') Рекомендации
+                li.main-navigation__item.main-navigation__item_contacts
+                  a(href='contacts.html') Контакты
+                li.main-navigation__item.main-navigation__phone
+                  a(href='tel:+78005008020')
+                    svg(width='24', height='24')
+                    span.main-navigation__phone-number +7 800 500-80-2
+            
+    block page-bottom
+      script(src='js/vendors.min.js')
+      script(src='js/script.min.js')
