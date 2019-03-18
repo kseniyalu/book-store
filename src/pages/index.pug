@@ -5,6 +5,61 @@ block meta
   meta(name='description', content='')
 
 block content
-  h1 Заголовок
-  +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '500 ₽')
-  +mini-card( 'Второе название книги', 'book.html', 'img/lat-logic.jpg', '', '100 ₽')
+  section.slider
+    +slide('Новое поступление книги "Симпсоны и их математические секреты"', 'Для поклонников сериала "Симпсоны" и для всех, кому интересна математика', 'book.html', 'img/simpsony.png')
+    button.arrow-left.slider__arrow(area-label='Предыдущий')
+    button.arrow-right.slider__arrow(area-label='Следующий')
+  section.book-list
+    .books-tags
+      ul.books-tags__list
+        li.books-filter__item.books-filter_active 
+          a(href='all.html') Все
+        li.books-filter__item
+          a(href='marketing.html') Маркетинг
+        li.books-filter__item
+          a(href='scifi.html') Научпоп
+        li.books-filter__item
+          a(href='business.html') Бизнес
+        li.books-filter__item
+          a(href='art.html') Творчество
+    //скрыть заголовок
+    h1 Список книг 
+    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '500 ₽')
+    +mini-card( 'Второе название книги', 'book.html', 'img/lat-logic.jpg', '', '100 ₽')
+    nav.pagination
+      ul.pagination__list
+        li.pagination__item.pagination_active
+          a(href='page1.html') 1
+        li.pagination__item.pagination_active
+          a(href='page2.html') 2
+        li.pagination__item.pagination_active
+          a(href='page3.html') 3
+        li.pagination__item.pagination_active
+          a(href='page4.html') 4
+        li.pagination__item.pagination_active
+          a(href='page5.html') 5
+        li.pagination__item.pagination_active
+          p ...
+        li.pagination__item.pagination_active
+          a(href='page10.html') 10
+  section.delivery
+    h2 Доставка в любое место
+    p.delivery-subtitle // ну почти в любое
+    .delivery-item
+      img.delivery-item__img(src=img/lat-logic.jpg, alt=title)
+        svg(width='80', height='80')
+      p.delivery-item__description Покупаете книги на сайте в любом формате — бумажные, электронные или аудио.
+      img.delivery-item__img(src=img/lat-logic.jpg, alt=title)
+        svg(width='80', height='80')
+      p.delivery-item__description Мы подарим вам "Набор читателя" и добавим в посылку.
+      img.delivery-item__img(src=img/lat-logic.jpg, alt=title)
+        svg(width='80', height='80')
+      p.delivery-item__description Бесплатно доставляем заказы от 3 000 ₽ по всей России.
+      img.delivery-item__img(src=img/lat-logic.jpg, alt=title)
+        svg(width='80', height='80')
+      p.delivery-item__description Доставка в более чем 300 городов России. По Москве и Санкт-Петербургу — бесплатно.
+  section
+    h2 Новинки
+    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '500 ₽')
+    +mini-card( 'Второе название книги', 'book.html', 'img/lat-logic.jpg', '', '100 ₽')
+    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '500 ₽')

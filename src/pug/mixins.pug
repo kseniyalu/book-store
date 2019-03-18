@@ -1,6 +1,6 @@
 //- Примеси
 
-mixin mini-card(name, url,imgUrl, description, price)
+mixin mini-card(name, url, imgUrl, description, price)
   article.mini-card
     a.mini-card__container(href=url)
       img.mini-card__img(src=imgUrl, alt=name)
@@ -9,3 +9,11 @@ mixin mini-card(name, url,imgUrl, description, price)
         p.mini-card__description= description
       if price
         p.mini-card__price= price
+        
+        
+mixin slide(description, title, url, imgUrl)
+  article.slide
+    span.slide__description= description
+    span.slide__title= title
+    a(href=url)
+    img.slide__img(src=imgUrl, alt=title)
