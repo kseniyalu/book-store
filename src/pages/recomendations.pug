@@ -5,4 +5,16 @@ block meta
   meta(name='description', content='')
 
 block content
-  h1 Заголовок
+  section.recomendations
+    h1 Наши рекомендации
+    article.recomendation-card
+      a.recomendation-card__container(href='rec1.html')
+        h3.recomendation-card-title Новая статься в блоге
+        p.reconemdation-card-description Посмотрите, как чтение книг меняет вопсриятие человека
+        a(href='blog-article.html') Читать статью
+    article.recomendation-card-banner
+      a.recomendation-card-banner__container(href='rec2.html')
+        h3.recomendation-card-banner-title
+        p.recomendation-card-banner-description
+        a(href='blog-article.html')
+  section.banner

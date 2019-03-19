@@ -6,7 +6,7 @@ block meta
 
 block content
   section.slider
-    +slide('Новое поступление книги "Симпсоны и их математические секреты"', 'Для поклонников сериала "Симпсоны" и для всех, кому интересна математика', 'book.html', 'img/simpsony.png')
+    +slide('Новое поступление книги "Симпсоны и их математические секреты"', 'Для поклонников сериала "Симпсоны" и для всех, кому интересна математика', 'book.html', 'img/simpsony.jpg')
     button.arrow-left.slider__arrow(area-label='Предыдущий')
     button.arrow-right.slider__arrow(area-label='Следующий')
   section.book-list
@@ -46,21 +46,18 @@ block content
     h2 Доставка в любое место
     p.delivery-subtitle // ну почти в любое
     .delivery-item
-      img.delivery-item__img(src=img/lat-logic.jpg, alt=title)
-        svg(width='80', height='80')
+      svg(width='80', height='80')
       p.delivery-item__description Покупаете книги на сайте в любом формате — бумажные, электронные или аудио.
-      img.delivery-item__img(src=img/lat-logic.jpg, alt=title)
-        svg(width='80', height='80')
+      svg(width='80', height='80')
       p.delivery-item__description Мы подарим вам "Набор читателя" и добавим в посылку.
-      img.delivery-item__img(src=img/lat-logic.jpg, alt=title)
-        svg(width='80', height='80')
+      svg(width='80', height='80')
       p.delivery-item__description Бесплатно доставляем заказы от 3 000 ₽ по всей России.
-      img.delivery-item__img(src=img/lat-logic.jpg, alt=title)
-        svg(width='80', height='80')
+      svg(width='80', height='80')
       p.delivery-item__description Доставка в более чем 300 городов России. По Москве и Санкт-Петербургу — бесплатно.
-  section
-    h2 Новинки
-    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '500 ₽')
-    +mini-card( 'Второе название книги', 'book.html', 'img/lat-logic.jpg', '', '100 ₽')
-    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '500 ₽')
-    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '700 ₽')
+  section.new
+    h2 Наши новинки
+    a(href='new.html') Все новинки
+    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
+    +mini-card( 'Второе название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
+    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
+    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
