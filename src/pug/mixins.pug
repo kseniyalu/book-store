@@ -20,16 +20,16 @@ mixin slide(description, title, url, imgUrl)
 
 
 //- Мадификатор на background?
-mixin recomendation-card(name, url, description, link, button )
-  article.recomendation-card
-    if url
-      a.recomendation-card__container(href=url)
-        h3.recomendation-card__title=name
-        if description
-          p.recomendation-card__description= description
-        if link
-          a.recomendation-card__link(href=link)
-        if button
-          //- Как area-label вынести из mixin?
-          button.btn.recomendation-card__btn(area-label='Проголосовать')
-        if 
+//- mixin recomendation-card(name, url, description, link, button )
+//-   article.recomendation-card
+//-     if url
+//-       a.recomendation-card__container(href=url)
+//-         h3.recomendation-card__title=name
+//-         if description
+//-           p.recomendation-card__description= description
+//-         if link
+//-           a.recomendation-card__link(href=link)
+//-         if button
+//-           //- Как area-label вынести из mixin?
+//-           button.btn.recomendation-card__btn(area-label='Проголосовать')
+//-         if 

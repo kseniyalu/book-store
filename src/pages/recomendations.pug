@@ -8,13 +8,36 @@ block content
   section.recomendations
     h1 Наши рекомендации
     article.recomendation-card
-      a.recomendation-card__container(href='rec1.html')
-        h3.recomendation-card-title Новая статься в блоге
-        p.reconemdation-card-description Посмотрите, как чтение книг меняет вопсриятие человека
-        a(href='blog-article.html') Читать статью
+      h3.recomendation-card__title Новая статься в блоге
+      p.reconemdation-card__description Посмотрите, как чтение книг меняет вопсриятие человека
+      a(href='blog-article.html') Читать статью
     article.recomendation-card-banner
       a.recomendation-card-banner__container(href='rec2.html')
-        h3.recomendation-card-banner-title
-        p.recomendation-card-banner-description
-        a(href='blog-article.html')
+        img.recomendation-card-banner__img(src='img/recomendation-banner1.png', alt='Книга осени')
+        h3.recomendation-card-banner__title Книга осени
+        p.recomendation-card-banner__description Проголосуй за лучшую книгу этой осени
+    article.recomendation-card-banner
+      a.recomendation-card-banner__container(href='rec3.html')
+        img.recomendation-card-banner__img(src='img/recomendation-banner2.png', alt='Ваши лучшие фотографии у нас')
+        h3.recomendation-card-banner__title Наши подборки ваших лучших фотографий у нас
+    article.recomendation-card
+      h3.recomendation-card__title Нам важно ваше мнение
+      p.reconemdation-card__description Ставьте пальцы вверх, мы хотим знать ваше мнение
+      button.btn.reconemdation-card__btn(area-label='Проголосовать') Проголосовать
+    article.recomendation-card_color
+      h3.recomendation-card__title Книги для детей
+      p.reconemdation-card__description У нас появился новый раздел, в котором мы подбираем книги для юных читателей
+      a(href='rec5.html') Посмотреть раздел
+    article.recomendation-card-banner
+      a.recomendation-card-banner__container(href='rec6.html')
+        img.recomendation-card-banner__img(src='img/recomendation-banner3.png', alt='У вас есть старые книги?')
+        h3.recomendation-card-banner__title У вас есть старые книги?
+        p.reconemdation-card-banner__description Приносите их нам и обменивайте на новые
+    article.gift-book
+      h3.gift-book__title Книга в подарок!
+      p.gift-book__description Привашем новом заказе мы подарим вам книгу.
+      +mini-card( 'Путеводитель по лжи', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
   section.banner
+    img.banner__img(src='img/biblio-banner.png', alt='Мы открыли для вас библиотеку')
+    h3.banner__title Мы открыли для вас уютную библиотеку
+    p.banner__description Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00
