@@ -5,4 +5,26 @@ block meta
   meta(name='description', content='')
 
 block content
-  h1 Заголовок
+  section.contacts
+    h1 Контакты
+    ul.contacts__list
+      li.contacts__item Набережная реки фонтакни, 202
+      li.contacts__item с 9:00 до 19:00 ежедневно
+      li.contacts__item +7 (911) 123 45 67
+    img.contacts__map(src='img/map.jpg', alt='Карта')
+  section.form
+    h2 Есть вопросы?
+    p Напишите нам на почту. Отвечаем в тесении дня.
+    input.contacts-input
+    input.contacts-input
+    input.form__checkbox
+    p Я согласен(-на) с
+    a(href='politics.html') политикой конфиденциальности
+    p и    
+    a(href='processing-rules.html') правилами обработки данных
+    button.btn.contacts__button Отправить
+  section.banner
+    img.banner__img(src='img/biblio-banner.png', alt='Мы открыли для вас библиотеку')
+    svg(width='80', height='80')
+    h3.banner__title Мы открыли для вас уютную библиотеку
+    p.banner__description Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00
