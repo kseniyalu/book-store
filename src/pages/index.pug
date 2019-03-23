@@ -6,45 +6,59 @@ block meta
 
 block content
   section.slider
-    +slide('Новое поступление книги "Симпсоны и их математические секреты"', 'Для поклонников сериала "Симпсоны" и для всех, кому интересна математика', 'book.html', 'img/simpsony.jpg')
-    button.btn.slider__arrow(area-label='Предыдущий')
-    button.btn.slider__arrow(area-label='Следующий')
+    h1.title-hidden Новые книги в каталоге Book Store
+    +slide('Новое поступление книги "Симпсоны и их математические секреты"',
+    'Для поклонников сериала "Симпсоны" и для всех, кому интересна математика',
+    'book.html',
+    'img/simpsony.jpg')
+    button.slider__arrow Предыдущий слайдер
+    button.slider__arrow Следующий слайдер
   section.book-list
-    .books-tags
-      ul.books-tags__list
-        li.books-filter__item.books-filter_active 
+    .tags
+      ul.tags__list
+        li.tags__item.tags_active 
           a(href='all.html') Все
-        li.books-filter__item
+        li.tags__item
           a(href='marketing.html') Маркетинг
-        li.books-filter__item
+        li.tags__item
           a(href='scifi.html') Научпоп
-        li.books-filter__item
+        li.tags__item
           a(href='business.html') Бизнес
-        li.books-filter__item
+        li.tags__item
           a(href='art.html') Творчество
     //скрыть заголовок
-    h1 Список книг 
-    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '500 ₽')
-    +mini-card( 'Второе название книги', 'book.html', 'img/lat-logic.jpg', '', '100 ₽')
+    h1.title-hidden Список всех книг магазина
+    .book-list__item
+      +mini-card( 'Название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '500 ₽')
+    .book-list__item
+      +mini-card( 'Второе название книги', 'book.html', 'img/books/lat-logic.jpg', '', '100 ₽')
+    .book-list__item
+      +mini-card( 'Название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '500 ₽')
+    .book-list__item
+      +mini-card( 'Второе название книги', 'book.html', 'img/books/lat-logic.jpg', '', '100 ₽')
+    .book-list__item
+      +mini-card( 'Название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '500 ₽')
+    .book-list__item
+      +mini-card( 'Второе название книги', 'book.html', 'img/books/lat-logic.jpg', '', '100 ₽')
     nav.pagination
       ul.pagination__list
         li.pagination__item.pagination_active
           a(href='page1.html') 1
-        li.pagination__item.pagination_active
+        li.pagination__item
           a(href='page2.html') 2
-        li.pagination__item.pagination_active
+        li.pagination__item
           a(href='page3.html') 3
-        li.pagination__item.pagination_active
+        li.pagination__item
           a(href='page4.html') 4
-        li.pagination__item.pagination_active
+        li.pagination__item
           a(href='page5.html') 5
-        li.pagination__item.pagination_active
-          p ...
-        li.pagination__item.pagination_active
+        li.pagination__item
+          span ...
+        li.pagination__item
           a(href='page10.html') 10
   section.delivery
     h2 Доставка в любое место
-    p.delivery-subtitle // ну почти в любое
+    p.delivery__subtitle // ну почти в любое
     .delivery__item
       svg(width='80', height='80')
       p.delivery-item__description Покупаете книги на сайте в любом формате — бумажные, электронные или аудио.
@@ -58,9 +72,13 @@ block content
       svg(width='80', height='80')
       p.delivery-item__description Доставка в более чем 300 городов России. По Москве и Санкт-Петербургу — бесплатно.
   section.new
-    h2 Наши новинки
+    h2.new__title Наши новинки
     a(href='new.html') Все новинки
-    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
-    +mini-card( 'Второе название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
-    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
-    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
+    .new__item
+      +mini-card( 'Название книги', 'book.html', 'books/lat-logic.jpg', 'Описание', '')
+    .new__item
+      +mini-card( 'Второе название книги', 'book.html', 'books/lat-logic.jpg', 'Описание', '')
+    .new__item
+      +mini-card( 'Название книги', 'book.html', 'books/lat-logic.jpg', 'Описание', '')
+    .new__item
+      +mini-card( 'Название книги', 'book.html', 'books/lat-logic.jpg', 'Описание', '')

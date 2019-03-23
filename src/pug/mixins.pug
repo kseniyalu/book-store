@@ -2,9 +2,9 @@
 
 mixin mini-card(name, url, imgUrl, description, price)
   article.mini-card
-    a.mini-card__container(href=url)
-      img.mini-card__img(src=imgUrl, alt=name)
-      h3.mini-card__title=name
+    a.mini-card__container(href= url)
+      img.mini-card__img(src= imgUrl, alt= name)
+      h3.mini-card__title= name
       if description
         p.mini-card__description= description
       if price
@@ -13,23 +13,7 @@ mixin mini-card(name, url, imgUrl, description, price)
         
 mixin slide(description, title, url, imgUrl)
   article.slide
-    span.slide__description= description
-    span.slide__title= title
-    a(href=url)
-    img.slide__img(src=imgUrl, alt=title)
-
-
-//- Мадификатор на background?
-//- mixin recomendation-card(name, url, description, link, button )
-//-   article.recomendation-card
-//-     if url
-//-       a.recomendation-card__container(href=url)
-//-         h3.recomendation-card__title=name
-//-         if description
-//-           p.recomendation-card__description= description
-//-         if link
-//-           a.recomendation-card__link(href=link)
-//-         if button
-//-           //- Как area-label вынести из mixin?
-//-           button.btn.recomendation-card__btn(area-label='Проголосовать')
-//-         if 
+    p.slide__description= description
+    h2.slide__title= title
+    a(href= url)
+    img.slide__img(src= imgUrl, alt= title)

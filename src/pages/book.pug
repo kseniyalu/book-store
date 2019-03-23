@@ -6,90 +6,70 @@ block meta
 
 block content
   section.book
-    .book-preview
-      img.book-preview__img(src='img/book-superpotrebiteli.jpg', alt='Суперпотребители')
-      .book-preview__example
-        img.example(src='img/book-example.jpg', alt='Суперпотребители')
-        img.example(src='img/book-example.jpg', alt='Суперпотребители')
-        img.example(src='img/book-example.jpg', alt='Суперпотребители')
-    .book-info
-      p.book-info__subtitle Эдди Юн
-      h1.book-info__title Суперпотребители
-      p.book-info__description Кто это и почему они так важны для вашего бизнеса
-    .book-details
-      ul.book-details__list
-        li.book-details__item Артикул
-        li.book-details__item В наличии
-        li.book-details__item Издательство
-        li.book-details__item Цена
-      ul.book-details__list
-        li.book-details__item 1090763
-        li.book-details__item 5 шт.
-        li.book-details__item Издал
-        li.book-details__item 800 Р
-    .book-action
-      button.btn.book-action__button(area-label='Добавить в корзину') Добавить в корзину
-      .book-action__number
-        p 1
-        p шт.
-      .book-action__like
+    .book__preview
+      img.book__img(src='img/books/book-superpotrebiteli.jpg', alt='Суперпотребители')
+    .book__example
+      img.book__page(src='img/book-example.jpg', alt='Суперпотребители1')
+      img.book__page(src='img/book-example.jpg', alt='Суперпотребители2')
+      img.book__page(src='img/book-example.jpg', alt='Суперпотребители3')
+    .book__info
+      p.book__subtitle Эдди Юн
+      h1.book__title Суперпотребители
+      p.book__description Кто это и почему они так важны для вашего бизнеса
+    .book__details
+      ul.book__list
+        li.book__item Артикул
+        li.book__item В наличии
+        li.book__item Издательство
+        li.book__item Цена
+      ul.book__list
+        li.book__item 1090763
+        li.book__item 5 шт.
+        li.book__item Издал
+        li.book__item 800 Р
+    .book__action
+      button.btn.book__button Добавить в корзину
+      .book__number
+        span 1
+        span шт.
+      .book__like
         svg(width='24', height='24')
         p 20 людям понравилась эта книга
-    .book-description
-      p.book-description__title Краткое описание
-      p.book-description__text В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
-      p.book-description__text Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
-      //- Сделать блок
-      .book-description__read-more
-      a(href='index.html') Показать полностью
+  section.book__description
+    h1.title-hidden Описание книги
+    h2 Краткое описание
+    p В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
+    p Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
+    .book__read-more
+      button.btn.book__button-more Показать полностью
       svg(width='16', height='16')
-      .book-description__social
-        .facebook
-          svg(width='16', height='16')
-          p 15
-        .vk
-          svg(width='16', height='16')
-          p 4
-        .like
-          svg(width='16', height='16')
-          p 150
-        .dislike
-          svg(width='16', height='16')
-          p 0
+    .book__social
+      button.btn.book__button-facebook Показать полностью
+        svg(width='16', height='16')
+        span 15
+      button.btn.book__button-vk
+        svg(width='16', height='16')
+        span 4
+      button.btn.book__button-like
+        svg(width='16', height='16')
+        span 150
+      button.btn.book__button-dislike
+        svg(width='16', height='16')
+        span 0
   section.other-books
-    h2 Книги по тематике
+    h2.new__title Книги по тематике
     a(href='new.html') Книги по тематике
-    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
-    +mini-card( 'Второе название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
-    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
-    +mini-card( 'Название книги', 'book.html', 'img/lat-logic.jpg', 'Описание', '')
+    .new__item
+      +mini-card( 'Название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
+    .new__item
+      +mini-card( 'Второе название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
+    .new__item
+      +mini-card( 'Название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
+    .new__item
+      +mini-card( 'Название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
   section.banner
-    img.banner__img(src='img/biblio-banner.png', alt='Мы открыли для вас библиотеку')
+    img.banner__img
     svg(width='80', height='80')
     h3.banner__title Мы открыли для вас уютную библиотеку
     p.banner__description Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
