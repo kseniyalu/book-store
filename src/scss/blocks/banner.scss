@@ -1,0 +1,39 @@
+.banner {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 311px;
+  background-image: url('../img/banner-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  &__vector {
+    width: 99px;
+    height: 12px;
+    background-color: #fff;
+    margin: auto;
+    margin-bottom: 41px;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 21px;
+  }
+
+  &__description {
+    font-size: $font-size;
+    color: #fff;
+    text-align: center;
+  }
+
+}

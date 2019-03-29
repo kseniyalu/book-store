@@ -1,9 +1,9 @@
 .btn {
   display: inline-block;
   vertical-align: middle;
-  padding: 6px 20px;
   border: none;
   border-radius: $border-radius;
+  padding: 6px 20px;
   font-size: $font-size;
   text-align: center;
   font-weight: 400;
@@ -16,7 +16,7 @@
 
   &:hover,
   &:focus {
-    background-color: pink;
+    // background-color: pink;
   }
 
   &:disable {}

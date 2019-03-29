@@ -12,19 +12,27 @@ block content
       li.contacts__item с 9:00 до 19:00 ежедневно
       li.contacts__item +7 (911) 123 45 67
     img.contacts__map(src='img/map.jpg', alt='Карта')
-  section.form
+  form.form
     h2.form__title Есть вопросы?
-    p Напишите нам на почту. Отвечаем в тесении дня.
-    input.contacts-input
-    input.contacts-input
-    input.form__checkbox
-    p Я согласен(-на) с
-    a(href='politics.html') политикой конфиденциальности
-    p и    
-    a(href='processing-rules.html') правилами обработки данных
-    button.btn.contacts__button Отправить
+    .form__description
+      p Напишите нам на почту. Отвечаем в течении дня.
+    .form__container
+      .field-text.field-text_error
+        input.field-text__input(type='email', placeholder='Ваша почта')
+        .field-text__message Вы не ввели почту
+      .field-text
+        input.field-text__input(type='text', placeholder='Сообщение')
+      .field-checkbox.field-checkbox_error.form__checkbox
+        input.field-checkbox__input(type='checkbox', id='agreement')
+        label.field-checkbox__pseudo-checkbox(for='agreement')
+        span.field-checkbox__text #[label(for='agreement') Я согласен(-на) с] #[a(href='') политикой конфиденциальности] и #[a(href='') правилами обработки данных]
+        .field-checkbox__message Нужно согласиться с условиями, поставив галочку
+      .field-action.form__action
+        button.btn Отправить
+        
+        
   section.banner
-    img.banner__img
-    svg(width='80', height='80')
-    h3.banner__title Мы открыли для вас уютную библиотеку
-    p.banner__description Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00
+    .banner__container
+      .banner__vector
+      span.banner__title Мы открыли для вас уютную библиотеку
+      span.banner__description Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00
