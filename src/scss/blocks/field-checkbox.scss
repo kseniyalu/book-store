@@ -45,12 +45,12 @@
   }
 
   &__input {
+    position: absolute;
+    z-index: 1;
     width: 1px;
     height: 1px;
     overflow: hidden;
-    position: absolute;
     opacity: 0;
-    z-index: 1;
   }
 
   &__text {
@@ -62,5 +62,4 @@
 
   &__msg {
   }
-
 }

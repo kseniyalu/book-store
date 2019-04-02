@@ -17,29 +17,30 @@ block content
       h1.book__title Суперпотребители
       p.book__description Кто это и почему они так важны для вашего бизнеса
     .book__details
-      ul.book__list
-        li.book__item Артикул
-        li.book__item В наличии
-        li.book__item Издательство
-        li.book__item Цена
-      ul.book__list
-        li.book__item 1090763
-        li.book__item 5 шт.
-        li.book__item Издал
-        li.book__item 800 Р
+      table.book__table
+        tr.book__column
+          td.book__item Артикул
+          td.book__item В наличии
+          td.book__item Издательство
+          td.book__item Цена
+        tr.book_column
+          td.book__item 1090763
+          td.book__item 5 шт.
+          td.book__item Издал
+          td.book__item 800 Р
     .book__action
-      button.btn.book__button Добавить в корзину
+      button.btn Добавить в корзину
       .book__number
-        input.book__input
-        span шт.
+        input.field-text.field-text_number
+        span.book__sum шт.
       .book__like
         svg(width='24', height='24')
-        p 20 людям понравилась эта книга
-  section.book__description
+        p.book__like-subtitle 20 людям понравилась эта книга
+  section.book-description
     h1.title-hidden Описание книги
-    h2 Краткое описание
-    p В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
-    p Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
+    h3.book-description__title Краткое описание
+    p.book-description__text В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
+    p.book-description__text Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
     .book__read-more
       button.btn.book__button-more Показать полностью
       svg(width='16', height='16')
@@ -56,8 +57,8 @@ block content
       button.btn.book__button-dislike
         svg(width='16', height='16')
         span 0
-  section.other-books
-    h2.new__title Книги по тематике
+  section.book-shelf
+    h2.book-shelf__title Книги по тематике
     a(href='new.html') Книги по тематике
     .new__item
       +mini-card( 'Название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
@@ -68,7 +69,7 @@ block content
     .new__item
       +mini-card( 'Название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
   section.banner
-    img.banner__img
+    img.banner-img(src='img/banner-bg.jpg', alt='Мы открыли для вас уютную библиотеку')
     svg(width='80', height='80')
     h3.banner__title Мы открыли для вас уютную библиотеку
     p.banner__description Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00
