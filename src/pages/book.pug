@@ -19,25 +19,25 @@ block content
     .book__details
       table.book__table
         tr.book__column
-          td.book__item Артикул
-          td.book__item В наличии
-          td.book__item Издательство
-          td.book__item Цена
-        tr.book_column
-          td.book__item 1090763
-          td.book__item 5 шт.
-          td.book__item Издал
-          td.book__item 800 Р
-    .book__action
+          td.book__td-item Артикул
+          td.book__td-item В наличии
+          td.book__td-item Издательство
+          td.book__td-item Цена
+        tr.book__column
+          td.book__td-value 1090763
+          td.book__td-item 5 шт.
+          td.book__td-item Издал
+          td.book__td-item 800 Р
+    form
       button.btn Добавить в корзину
       .book__number
-        input.field-text.field-text_number
+        input.field-text.field-text__input
         span.book__sum шт.
       .book__like
         svg(width='24', height='24')
-        p.book__like-subtitle 20 людям понравилась эта книга
+        span.book__like-subtitle 20 людям понравилась эта книга
   section.book-description
-    h1.title-hidden Описание книги
+    h2.title-hidden Описание книги
     h3.book-description__title Краткое описание
     p.book-description__text В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
     p.book-description__text Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
@@ -58,19 +58,20 @@ block content
         svg(width='16', height='16')
         span 0
   section.book-shelf
-    h2.book-shelf__title Книги по тематике
-    a(href='new.html') Книги по тематике
-    .new__item
-      +mini-card( 'Название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
-    .new__item
-      +mini-card( 'Второе название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
-    .new__item
-      +mini-card( 'Название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
-    .new__item
-      +mini-card( 'Название книги', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
+    .book-shelf__header
+      h2.book-shelf__title Книги по тематике
+      a.book-shelf__link(href='new.html') Больше книг по тематике
+    .book-shelf__items
+      .book-shelf__item
+        +mini-card( 'Латеральная логика', 'book.html', 'img/books/book-lateralnaya-logika.jpg', 'Головоломный путь к нестандартному мышлению', '500 ₽')
+      .book-shelf__item
+        +mini-card( 'Путеводитель по лжи', 'book.html', 'img/books/book-putevoditel-po-lzhi.jpg', 'Критическое мышление в эпоху постправды', '630 ₽')
+      .book-shelf__item
+        +mini-card( 'Дао физики', 'book.html', 'img/books/book-dao-fiziki.jpg', 'Исследование параллелей между современной физикой и восточной философией', '560 ₽')
+      .book-shelf__item
+        +mini-card( 'Не очевидно', 'book.html', 'img/books/book-ne-ochevidno.jpg', 'Как выявлять тренды раньше других', '365 ₽')
   section.banner
-    img.banner-img(src='img/banner-bg.jpg', alt='Мы открыли для вас уютную библиотеку')
+    img.banner__img(src='img/banner-bg.jpg', alt='Мы открыли для вас уютную библиотеку')
     svg(width='80', height='80')
     h3.banner__title Мы открыли для вас уютную библиотеку
     p.banner__description Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00
-            

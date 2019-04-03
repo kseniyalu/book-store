@@ -16,7 +16,7 @@ block content
   section.book-list
     .tags
       ul.tags__list
-        li.tags__item.tags_active 
+        li.tags__item.tags_active
           a(href='all.html') Все
         li.tags__item
           a(href='marketing.html') Маркетинг
@@ -75,14 +75,16 @@ block content
     .delivery__item
       svg(width='80', height='80')
       p.delivery-item__description Доставка в более чем 300 городов России. По Москве и Санкт-Петербургу — бесплатно.
-  section.book-shelf
-    h2.book-shelf__title Наши новинки
-    a(href='new.html') Все новинки
-    .book-list__item
-      +mini-card( 'Латеральная логика', 'book.html', 'img/books/book-lateralnaya-logika.jpg', 'Головоломный путь к нестандартному мышлению', '500 ₽')
-    .book-list__item
-      +mini-card( 'Путеводитель по лжи', 'book.html', 'img/books/book-putevoditel-po-lzhi.jpg', 'Критическое мышление в эпоху постправды', '630 ₽')
-    .book-list__item
-      +mini-card( 'Дао физики', 'book.html', 'img/books/book-dao-fiziki.jpg', 'Исследование параллелей между современной физикой и восточной философией', '560 ₽')
-    .book-list__item
-      +mini-card( 'Не очевидно', 'book.html', 'img/books/book-ne-ochevidno.jpg', 'Как выявлять тренды раньше других', '365 ₽')
+      section.book-shelf
+        .book-shelf__header
+          h2.book-shelf__title Книги по тематике
+          a(href='new.html') Больше книг по тематике
+        .book-shelf__items
+          .book-shelf__item
+            +mini-card( 'Латеральная логика', 'book.html', 'img/books/book-lateralnaya-logika.jpg', 'Головоломный путь к нестандартному мышлению', '500 ₽')
+          .book-shelf__item
+            +mini-card( 'Путеводитель по лжи', 'book.html', 'img/books/book-putevoditel-po-lzhi.jpg', 'Критическое мышление в эпоху постправды', '630 ₽')
+          .book-shelf__item
+            +mini-card( 'Дао физики', 'book.html', 'img/books/book-dao-fiziki.jpg', 'Исследование параллелей между современной физикой и восточной философией', '560 ₽')
+          .book-shelf__item
+            +mini-card( 'Не очевидно', 'book.html', 'img/books/book-ne-ochevidno.jpg', 'Как выявлять тренды раньше других', '365 ₽')

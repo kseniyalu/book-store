@@ -7,45 +7,45 @@ block meta
 block content
   section.recomend
     h1.recomend__title Наши рекомендации
-    article.recomend__first
+    article.recomend__article
       h2.recomend__title-default Новая статься в блоге
       p.recomend__description-default Посмотрите, как чтение книг меняет вопсриятие человека
       a.recomend__link-default(href='blog-article.html') Читать статью
-    
-    article.recomend__second
+
+    article.recomend__best-book
       a.recomend__container(href='rec2.html')
-        img(src='img/recomend-second-bg.jpg', alt='Книга осени')
+        img.recomend__back(src='img/recomend-second-bg.jpg', alt='Книга осени')
         h2.recomend__title-banner Книга осени
         p.recomend__description-banner Проголосуй за лучшую книгу этой осени
-    
-    article.recomend__third
+
+    article.recomend__photoes
       a.recomend__container(href='rec3.html')
-        img(src='img/recomend-third-bg.jpg', alt='Подборки ваших фотографий')
+        img.recomend__back(src='img/recomend-third-bg.jpg', alt='Подборки ваших фотографий')
         h3.recomend__title-banner Наши подборки ваших лучших фотографий у нас
-    
-    article.recomend__fourth
+
+    article.recomend__vout
       h2.recomend__title-default Нам важно ваше мнение
       p.recomend__description-default Ставьте пальцы вверх, мы хотим знать ваше мнение
       button.btn Проголосовать
-    
-    article.recomend__fifth
+
+    article.recomend__kids-books
       a.recomend__container(href='rec5.html')
         h2.recomend__title-inverse Книги для детей
         p.recomend__description-inverse У нас появился новый раздел, в котором мы подбираем книги для юных читателей
-    
-    article.recomend__sixth
+
+    article.recomend__old-books
       a.recomend__container(href='rec6.html')
-        img(src='img/recomend-sixth-bg.jpg', alt='У вас есть старые книги?')
+        img.recomend__back(src='img/recomend-sixth-bg.jpg', alt='У вас есть старые книги?')
         h3.recomend__title-banner У вас есть старые книги?
         p.recomend__description-banner Приносите их нам и обменивайте на новые
-    
+
     article.gift-book
       h3.gift-book__title Книга в подарок!
       p.gift-book__description При вашем новом заказе мы подарим вам книгу.
       +mini-card( 'Путеводитель по лжи', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
-  
+
   section.banner
-    img.banner-img(src='img/banner-bg.jpg', alt='Мы открыли для вас уютную библиотеку')
+    img.banner__img(src='img/banner-bg.jpg', alt='Мы открыли для вас уютную библиотеку')
     svg(width='80', height='80')
     h3.banner__title Мы открыли для вас уютную библиотеку
     p.banner__description Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00
