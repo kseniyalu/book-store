@@ -19,6 +19,33 @@ const concat = require('gulp-concat');
 const pug = require('gulp-pug');
 const prettyHtml = require('gulp-pretty-html');
 const replace = require('gulp-replace');
+const responsive = require('gulp-responsive');
+
+function imagesConvertToJPG() {
+  return src('src/img/books_all/*.png')
+    .pipe(responsive({
+      '*.png': {},
+    },{
+      format:'jpg',
+      quality: 75,
+      progressive: true,
+    }))
+    .pipe(dest('src/img/books_all/'));
+}
+exports.imagesConvertToJPG = imagesConvertToJPG;
+
+function imagesConvertToWebp() {
+  return src('src/img/books_all/*.png')
+    .pipe(responsive({
+      '*.png': {},
+    },{
+      format:'webp',
+      quality: 75,
+      progressive: true,
+    }))
+    .pipe(dest('src/img/books_all/'));
+}
+exports.imagesConvertToWebp = imagesConvertToWebp;
 
 function compilePug() {
   return src(dir.src + 'pages/**/*.pug')
