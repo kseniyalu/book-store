@@ -10,8 +10,11 @@ block content
     ul.contacts__list
       li.contacts__item Набережная реки фонтакни, 202
       li.contacts__item с 9:00 до 19:00 ежедневно
-      li.contacts__item +7 (911) 123 45 67
-    img.contacts__map(src='img/map.jpg', alt='Карта')
+      li.contacts__item
+        a(href='tel:000000000') +7 (911) 123 45 67
+    //вставить айфрейм с картой
+    //- img.contacts__map(src='img/map.jpg', alt='Карта')
+
   form.form
     h2.form__title Есть вопросы?
     .form__description
@@ -29,8 +32,5 @@ block content
         .field-checkbox__message Нужно согласиться с условиями, поставив галочку
       .field-action.form__action
         button.btn Отправить
-  section.banner
-    img.banner__img(src='img/banner-bg.jpg', alt='Мы открыли для вас уютную библиотеку')
-    svg(width='80', height='80')
-    h3.banner__title Мы открыли для вас уютную библиотеку
-    p.banner__description Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00
+
+  +banner
