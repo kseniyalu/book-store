@@ -1,54 +1,50 @@
 .mini-card {
 
-  // a {
-  //   color: #000;
-  //   text-decoration: none;
-  // }
-  //
-  // &__container {
-  //   display: block;
-  //   position: relative;
-  //   width: 290px;
-  //   height: 600px;
-  //   overflow: hidden;
-  //
-  //   &:hover {
-  //     .mini-card__price {
-  //       color: $main-color;
-  //     }
-  //     .mini-card__img {
-  //       box-shadow: 0 12px 36px 4px rgba(244,212,228,1);
-  //     }
-  //   }
-  // }
-  //
-  // &__img {
-  //   width: 260px;
-  //   height: 370px;
-  //   margin-bottom: 25px;
-  //   background-size: cover;
-  // }
-  //
-  // &__title {
-  //   height: 65px;
-  //   font-size: $font-size-m;
-  //   margin: 0;
-  //   margin-bottom: 15px;
-  //   overflow: hidden;
-  //   text-decoration: none;
-  // }
-  //
-  // &__description {
-  //   height: 65px;
-  //   font-size: $font-size;
-  //   margin: 0px;
-  //   overflow: hidden;
-  // }
-  //
-  // &__price {
-  //   font-size: $font-size;
-  //   font-weight: bold;
-  //   position: absolute;
-  //   bottom: 0;
-  // }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 290px;
+    max-height: 600px;
+
+    &:hover {
+
+      .mini-card__price {
+        color: $main-color;
+        transition: 0.5s;
+      }
+
+      // .mini-card__img {
+      //   box-shadow: 0 12px 36px 4px rgba(244,212,228,1);
+      //   transition: 0.5s;
+      // }
+    }
+  }
+
+  &__img {
+    width: 260px;
+    background-size: cover;
+  }
+
+  &__title {
+    font-size: $font-size-m;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  &__description {
+    font-size: $font-size;
+    overflow: hidden;
+  }
+
+  &__price {
+    font-size: $font-size;
+    font-weight: bold;
+    // margin-top: 165px;
+  }
 }

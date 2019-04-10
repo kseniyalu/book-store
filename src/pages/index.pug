@@ -10,14 +10,13 @@ block content
     .slide__container
       +slide('Новое поступление книги "Симпсоны и их математические секреты"',
       'Для поклонников сериала "Симпсоны" и для всех, кому интересна математика',
-      'book.html',
-      'img/simpsony.jpg')
+      'book.html', 'Хочу узнать о книге больше', 'img/simpsony.jpg')
     button.slider__arrow.slider__arrow_pref Предыдущий слайдер
     button.slider__arrow.slider__arrow_next Следующий слайдер
   .book-list
     .tabs
       ul.tabs__list
-        li.tabs__item.tabs_active
+        li.tabs__item.tabs__item_active
           a(href='all.html') Все
         li.tabs__item
           a(href='marketing.html') Маркетинг

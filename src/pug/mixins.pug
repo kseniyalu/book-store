@@ -11,17 +11,19 @@ mixin mini-card(name, url, imgUrl, description, price)
         p.mini-card__price= price
 
 
-mixin slide(description, title, url, imgUrl)
+mixin slide(description, title, url, link, imgUrl)
   article.slide
-    p.slide__description= description
-    h2.slide__title= title
-    a(href= url)
+    .slide__container
+      p.slide__description= description
+      h2.slide__title= title
+      a.slide__link(href= url)= link
     img.slide__img(src= imgUrl, alt= title)
 
 
 mixin banner
   a.banner
-    .banner__img(src='img/banner-bg.jpg', alt='Мы открыли для вас уютную библиотеку')
-    svg(width='80', height='80')
+    .banner__img(src='../img/banner-bg.jpg', alt='Мы открыли для вас уютную библиотеку')
+    .banner__vector
+    //- svg(width='80', height='80')
     p.banner__title Мы открыли для вас уютную библиотеку
     p.banner__description Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00
