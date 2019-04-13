@@ -1,4 +1,5 @@
 .page {
+  display: grid;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-text-size-adjust: 100%;
@@ -6,7 +7,9 @@
 
   &__inner {}
 
-  &__content {}
+  &__content {
+    background-color: $gray-lightest;
+  }
 
   &__footer-wrapper {}
 

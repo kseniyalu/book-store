@@ -1,6 +1,26 @@
 .page-header {
   display: block;
-  padding: 20px;
-  // background-color: $main-color;
-  // color: desaturate($main-color, 40%);
+  background-color: #fff;
+  height: 50px;
+  margin-bottom: 60px;
+
+  &__container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  &__logo {
+    width: 127px;
+    height: 14px;
+    background-image: url('../img/logo.jpg');
+    margin-right: 30px;
+  }
+
+  &__open-time {
+    color: $gray;
+    font-size: $font-size-s;
+  }
 }

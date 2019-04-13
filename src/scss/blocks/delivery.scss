@@ -1,0 +1,26 @@
+.delivery {
+
+  &__title {
+  }
+
+  &__subtitle {
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-size: $font-size-s;
+    text-align: center;
+  }
+
+  &__icon {
+    // width: 80px;
+    // height: 80px;
+    background-color: #ff0;
+    margin-bottom: 20px;
+  }
+
+}

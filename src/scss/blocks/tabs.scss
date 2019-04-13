@@ -2,6 +2,7 @@
   width: 100%;
   height: 50px;
   background: #e8e8e8;
+  margin-bottom: 50px;
 
   a {
     text-decoration: none;
@@ -9,6 +10,7 @@
   }
 
   &__list {
+    padding-top: 20px;
   }
 
   &__item {
@@ -16,19 +18,27 @@
     display: inline;
     font-size: $font-size;
     margin-right: 50px;
-    margin-top: 22px;
 
     &_active {
-      color: $link-color;
+      a {
+        color: $link-color;
+      }
 
       &:before {
         display: block;
         position: absolute;
         content: '';
         width: 30px;
-        height: 4px;
-        top: 10px;
+        height: 2px;
+        top: 38px;
         background-color: $main-color;
+      }
+    }
+
+    &:hover {
+      a {
+        color: $link-color;
+        transition: 0.5s;
       }
     }
   }

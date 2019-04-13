@@ -18,10 +18,10 @@
         transition: 0.5s;
       }
 
-      // .mini-card__img {
-      //   box-shadow: 0 12px 36px 4px rgba(244,212,228,1);
-      //   transition: 0.5s;
-      // }
+      .mini-card__img {
+        box-shadow: 0 12px 36px 4px rgba(244,212,228,1);
+        transition: 0.5s;
+      }
     }
   }
 
@@ -45,6 +45,6 @@
   &__price {
     font-size: $font-size;
     font-weight: bold;
-    // margin-top: 165px;
+    margin-top: auto;
   }
 }

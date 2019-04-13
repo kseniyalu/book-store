@@ -5,14 +5,19 @@ block meta
   meta(name='description', content='')
 
 block content
+  //- h1.title-hidden Book Store
   section.slider
-    h1.title-hidden Book Store
-    .slide__container
-      +slide('Новое поступление книги "Симпсоны и их математические секреты"',
-      'Для поклонников сериала "Симпсоны" и для всех, кому интересна математика',
-      'book.html', 'Хочу узнать о книге больше', 'img/simpsony.jpg')
-    button.slider__arrow.slider__arrow_pref Предыдущий слайдер
-    button.slider__arrow.slider__arrow_next Следующий слайдер
+    button.slider__arrow.slider__arrow_pref
+    .slider__container
+      p.slider__description Новое поступление книги "Симпсоны и их математические секреты"
+      h2.slider__title Для поклонников сериала "Симпсоны" и для всех, кому интересна математика
+      a.slider__link(href='') Хочу узнать о книге больше
+    img.slider__img-simpsoni
+    //- .slide__container
+    //-   +slide('Новое поступление книги "Симпсоны и их математические секреты"',
+    //-   'Для поклонников сериала "Симпсоны" и для всех, кому интересна математика',
+    //-   'book.html', 'Хочу узнать о книге больше', 'img/books/book-lateralnaya-logika.jpg')
+    button.slider__arrow.slider__arrow_next
   .book-list
     .tabs
       ul.tabs__list
@@ -63,24 +68,24 @@ block content
   section.delivery
     h2.delivery__title Доставка в любое место
     p.delivery__subtitle // ну почти в любое
-    .delovery__list
+    .delivery__list
       .delivery__item
-        svg(width='80', height='80')
-        p.delivery-item__description Покупаете книги на сайте в любом формате — бумажные, электронные или аудио.
+        svg.delivery-item__icon(width='80', height='80')
+        p Покупаете книги на сайте в любом формате — бумажные, электронные или аудио.
       .delivery__item
-        svg(width='80', height='80')
-        p.delivery-item__description Мы подарим вам "Набор читателя" и добавим в посылку.
+        svg.delivery-item__icon(width='80', height='80')
+        p Мы подарим вам "Набор читателя" и добавим в посылку.
       .delivery__item
-        svg(width='80', height='80')
-        p.delivery-item__description Бесплатно доставляем заказы от 3 000 ₽ по всей России.
+        svg.delivery-item__icon(width='80', height='80')
+        p Бесплатно доставляем заказы от 3 000 ₽ по всей России.
       .delivery__item
-        svg(width='80', height='80')
-        p.delivery-item__description Доставка в более чем 300 городов России. По Москве и Санкт-Петербургу — бесплатно.
+        svg.delivery-item__icon(width='80', height='80')
+        p Доставка в более чем 300 городов России. По Москве и Санкт-Петербургу — бесплатно.
 
   section.book-shelf
     header.book-shelf__header
-      h2.book-shelf__title Книги по тематике
-      a(href='new.html') Больше книг по тематике
+      h2.book-shelf__title Наши новинки
+      a.book-shelf__link(href='new.html') Все новинки
     .book-shelf__list
       .book-shelf__item
         +mini-card( 'Латеральная логика', 'book.html', 'img/books/book-lateralnaya-logika.jpg', 'Головоломный путь к нестандартному мышлению')

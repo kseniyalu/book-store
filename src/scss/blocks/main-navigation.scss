@@ -1,0 +1,38 @@
+.main-navigation {
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: inline;
+    font-size: $font-size;
+    margin-right: 50px;
+    font-size: $font-size-s;
+    font-weight: 700;
+    text-transform: lowercase;
+
+    &_phone {
+      display: none;
+    }
+  }
+
+  &:hover {
+    a {
+      color: $main-color;
+      transition: 0.5s;
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .main-navigation__burger {
+    display: none;
+  }
+}

@@ -1,0 +1,187 @@
+.slider {
+  max-width: 90%;
+  max-height: 430px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 100px;
+
+  &__container {
+    width: 40%;
+  }
+
+  &__description {
+    width: 65%;
+    font-size: $font-size;
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    position: relative;
+    font-size: 40px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: -35px;
+      width: 500px;
+      height: 350px;
+      border: 8px solid #f3f3f3;
+      z-index: -10;
+    }
+  }
+
+  &__link {
+    color: $link-color;
+    text-decoration: none;
+  }
+
+  &__img-simpsoni {
+    width: 302px;
+    height: 424px;
+    background-image: url('../img/books/book-simpsony-i-ih-matematicheskie-sekrety.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__arrow {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #f4d4e4;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      background-color: $main-color;
+    }
+
+    &_pref {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 16px;
+        width: 10px;
+        height: 10px;
+        transform: rotate(-45deg);
+        border-top: 1px solid $main-color;
+        border-left: 1px solid $main-color;
+      }
+    }
+
+    &_next {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+        border-top: 1px solid $main-color;
+        border-right: 1px solid $main-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .slider {
+    max-width: 90%;
+    max-height: 430px;
+    display: flex;
+    margin: auto;
+
+    &__container {
+      width: 39%;
+    }
+
+    &__description {
+      width: 65%;
+      font-size: $font-size;
+      margin-bottom: 100px;
+    }
+
+    &__title {
+      position: relative;
+      font-size: 40px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: -15px;
+        width: 500px;
+        height: 350px;
+        border: 8px solid #f3f3f3;
+        z-index: -10;
+      }
+    }
+
+    &__link {
+      color: $link-color;
+      text-decoration: none;
+    }
+
+    &__img-simpsoni {
+      display: none;
+    }
+
+    &__arrow {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: #f4d4e4;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.3s;
+
+      &:hover,
+      &:focus {
+        background-color: $main-color;
+      }
+
+      &_pref {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 15px;
+          left: 16px;
+          width: 10px;
+          height: 10px;
+          transform: rotate(-45deg);
+          border-top: 1px solid $main-color;
+          border-left: 1px solid $main-color;
+        }
+      }
+
+      &_next {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 15px;
+          left: 12px;
+          width: 10px;
+          height: 10px;
+          transform: rotate(45deg);
+          border-top: 1px solid $main-color;
+          border-right: 1px solid $main-color;
+        }
+      }
+    }
+  }
+}
