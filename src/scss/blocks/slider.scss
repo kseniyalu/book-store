@@ -1,9 +1,7 @@
 .slider {
-  position: relative;
-  max-height: 430px;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 0 15px;
 
   &__item {
     display: flex;
@@ -29,7 +27,7 @@
     &:before {
       content: '';
       position: absolute;
-      width: 300px;
+      width: 290px;
       height: 280px;
       z-index: -1;
       top: 0;
@@ -48,7 +46,7 @@
   &__title {
     width: 90%;
     position: relative;
-    font-size: $font-size-m;
+    font-size: $font-size-m -2;
 
     @media (min-width: $screen-s) {
       font-size: $font-size-l
@@ -77,7 +75,7 @@
 
   &__arrow-wrapper {
     display: flex;
-    margin-top: auto;
+    margin: auto;
   }
 
   &__arrow {

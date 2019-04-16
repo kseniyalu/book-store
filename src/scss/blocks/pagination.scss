@@ -8,48 +8,53 @@
   }
 
   &__list {
-    padding-top: 20px;
+    margin: 0;
   }
 
   &__item {
     position: relative;
-    display: inline;
+    display: inline-block;
     font-size: $font-size;
     font-weight: 700;
-    margin-right: 25px;
+    margin-right: 20px;
 
     &_active {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #f4d4e4;
 
       a {
         color: #d72384;
       }
 
-      &:before {
-        content: '';
-        position: absolute;
-        top: -5px;
-        left: -10px;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #f4d4e4;
-      }
+      // &:before {
+      //   content: '';
+      //   position: absolute;
+      //   top: -5px;
+      //   left: -10px;
+      // }
+
     }
 
-    &:hover {
-      transition: 0.3s;
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: -5px;
-        left: -10px;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #f4d4e4;
-      }
-    }
+    // &:hover {
+    //
+    //   &:before {
+    //     border-color: #000;
+    //   }
+    // }
+    //   // &:before {
+    //   //   content: '';
+    //   //   position: absolute;
+    //   //   top: -5px;
+    //   //   left: -10px;
+    //   //   width: 30px;
+    //   //   height: 30px;
+    //   //   border-radius: 50%;
+    //   //   background-color: #f4d4e4;
+    //   //   transition: 0.5s;
+    //   // }
+    // }
 
     &_used {
 

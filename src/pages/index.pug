@@ -56,7 +56,7 @@ block content
           a(href='page2.html') 2
         li.pagination__item
           a(href='page3.html') 3
-        li.pagination__item
+        li.pagination__item.pagination__item_used
           a(href='page4.html') 4
         li.pagination__item
           a(href='page5.html') 5
@@ -66,21 +66,22 @@ block content
           a(href='page10.html') 10
 
   section.delivery
-    h2.delivery__title Доставка в любое место
-    p.delivery__subtitle // ну почти в любое
-    .delivery__list
-      .delivery__item
-        svg.delivery-item__icon(width='80', height='80')
-        p Покупаете книги на сайте в любом формате — бумажные, электронные или аудио.
-      .delivery__item
-        svg.delivery-item__icon(width='80', height='80')
-        p Мы подарим вам "Набор читателя" и добавим в посылку.
-      .delivery__item
-        svg.delivery-item__icon(width='80', height='80')
-        p Бесплатно доставляем заказы от 3 000 ₽ по всей России.
-      .delivery__item
-        svg.delivery-item__icon(width='80', height='80')
-        p Доставка в более чем 300 городов России. По Москве и Санкт-Петербургу — бесплатно.
+    .delivery__wrapper
+      h2.delivery__title Доставим в любое место
+      p.delivery__subtitle // ну почти в любое
+      .delivery__list
+        .delivery__item
+          svg.delivery-item__icon(width='80', height='80')
+          p Покупаете книги на сайте в любом формате — бумажные, электронные или аудио.
+        .delivery__item
+          svg.delivery-item__icon(width='80', height='80')
+          p Мы подарим вам "Набор читателя" и добавим в посылку.
+        .delivery__item
+          svg.delivery-item__icon(width='80', height='80')
+          p Бесплатно доставляем заказы от 3 000 ₽ по всей России.
+        .delivery__item
+          svg.delivery-item__icon(width='80', height='80')
+          p Доставка в более чем 300 городов России. По Москве и Санкт-Петербургу — бесплатно.
 
   section.book-shelf
     header.book-shelf__header
