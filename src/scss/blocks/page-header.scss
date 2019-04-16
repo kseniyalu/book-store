@@ -12,15 +12,19 @@
     padding: 0 20px;
   }
 
-  &__logo {
-    width: 127px;
-    height: 14px;
-    background-image: url('../img/logo.jpg');
-    margin-right: 30px;
-  }
+  // &__logo {
+  //   width: 127px;
+  //   height: 14px;
+  //   background-image: url('../img/logo.jpg');
+  //   margin-right: 30px;
+  // }
 
   &__open-time {
-    color: $gray;
-    font-size: $font-size-s;
+    display: none;
+
+    @media (min-width: $screen-s) {
+      color: $gray;
+      font-size: $font-size-s;
+    }
   }
 }

@@ -1,55 +1,87 @@
 .slider {
-  max-width: 90%;
+  position: relative;
   max-height: 430px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   margin: auto;
-  margin-bottom: 100px;
 
-  &__container {
-    width: 40%;
+  &__item {
+    display: flex;
   }
+
+  &__container {}
 
   &__description {
-    width: 65%;
     font-size: $font-size;
-    margin-bottom: 100px;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-m) {
+      width: 65%;
+      margin-bottom: 44px;
+    }
   }
 
-  &__title {
+  &__item-text {
     position: relative;
-    font-size: 40px;
+    z-index: 1;
+    padding: 20px;
 
     &:before {
       content: '';
       position: absolute;
-      top: -40px;
-      left: -35px;
-      width: 500px;
-      height: 350px;
-      border: 8px solid #f3f3f3;
-      z-index: -10;
+      width: 300px;
+      height: 280px;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border: 10px solid #ff0;
+
+      @media (min-width: $screen-l) {
+        right: auto;
+        width: 200px;
+      }
+    }
+  }
+
+  &__title {
+    width: 90%;
+    position: relative;
+    font-size: $font-size-m;
+
+    @media (min-width: $screen-s) {
+      font-size: $font-size-l
     }
   }
 
   &__link {
     color: $link-color;
     text-decoration: none;
+    margin-top: 40px;
   }
 
-  &__img-simpsoni {
+  &__img-wrap {
+    display: none;
+
+    @media (min-width: $screen-l) {
+      display: block;
+      flex-shrink: 0;
+    }
+  }
+
+  &__item-img {
     width: 302px;
     height: 424px;
-    background-image: url('../img/books/book-simpsony-i-ih-matematicheskie-sekrety.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  }
+
+  &__arrow-wrapper {
+    display: flex;
+    margin-top: auto;
   }
 
   &__arrow {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
+    z-index: 2;
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -57,14 +89,39 @@
     background-color: #f4d4e4;
     cursor: pointer;
     user-select: none;
+    transform: translateY(-50%);
     transition: all 0.3s;
+
+    @media (min-width: $screen-s) {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      display: inline-block;
+      vertical-align: middle;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: #f4d4e4;
+      cursor: pointer;
+      user-select: none;
+      transform: translateY(-50%);
+      transition: all 0.3s;
+    }
 
     &:hover,
     &:focus {
       background-color: $main-color;
+      border-color: #000;
+
+      &:before {
+        border-color: #000;
+      }
     }
 
     &_pref {
+      left: 0;
+
       &:before {
         content: '';
         position: absolute;
@@ -79,6 +136,8 @@
     }
 
     &_next {
+      right: 0;
+
       &:before {
         content: '';
         position: absolute;
@@ -89,98 +148,6 @@
         transform: rotate(45deg);
         border-top: 1px solid $main-color;
         border-right: 1px solid $main-color;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 320px) {
-
-  .slider {
-    max-width: 90%;
-    max-height: 430px;
-    display: flex;
-    margin: auto;
-
-    &__container {
-      width: 39%;
-    }
-
-    &__description {
-      width: 65%;
-      font-size: $font-size;
-      margin-bottom: 100px;
-    }
-
-    &__title {
-      position: relative;
-      font-size: 40px;
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: 40px;
-        left: -15px;
-        width: 500px;
-        height: 350px;
-        border: 8px solid #f3f3f3;
-        z-index: -10;
-      }
-    }
-
-    &__link {
-      color: $link-color;
-      text-decoration: none;
-    }
-
-    &__img-simpsoni {
-      display: none;
-    }
-
-    &__arrow {
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      background-color: #f4d4e4;
-      cursor: pointer;
-      user-select: none;
-      transition: all 0.3s;
-
-      &:hover,
-      &:focus {
-        background-color: $main-color;
-      }
-
-      &_pref {
-        &:before {
-          content: '';
-          position: absolute;
-          top: 15px;
-          left: 16px;
-          width: 10px;
-          height: 10px;
-          transform: rotate(-45deg);
-          border-top: 1px solid $main-color;
-          border-left: 1px solid $main-color;
-        }
-      }
-
-      &_next {
-        &:before {
-          content: '';
-          position: absolute;
-          top: 15px;
-          left: 12px;
-          width: 10px;
-          height: 10px;
-          transform: rotate(45deg);
-          border-top: 1px solid $main-color;
-          border-right: 1px solid $main-color;
-        }
       }
     }
   }

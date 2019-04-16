@@ -7,17 +7,17 @@ block meta
 block content
   //- h1.title-hidden Book Store
   section.slider
-    button.slider__arrow.slider__arrow_pref
-    .slider__container
-      p.slider__description Новое поступление книги "Симпсоны и их математические секреты"
-      h2.slider__title Для поклонников сериала "Симпсоны" и для всех, кому интересна математика
-      a.slider__link(href='') Хочу узнать о книге больше
-    img.slider__img-simpsoni
-    //- .slide__container
-    //-   +slide('Новое поступление книги "Симпсоны и их математические секреты"',
-    //-   'Для поклонников сериала "Симпсоны" и для всех, кому интересна математика',
-    //-   'book.html', 'Хочу узнать о книге больше', 'img/books/book-lateralnaya-logika.jpg')
-    button.slider__arrow.slider__arrow_next
+    .slider__item
+      .slider__container
+        p.slider__description Новое поступление книги "Симпсоны и их математические секреты"
+        .slider__item-text
+          h2.slider__title Для поклонников сериала "Симпсоны" и для всех, кому интересна математика
+          a.slider__link(href='') Хочу узнать о книге больше
+      .slider__img-wrap
+        img.slider__item-img(src='img/books/book-simpsony-i-ih-matematicheskie-sekrety.jpg', alt='')
+    .slider__arrow-wrapper
+      button.slider__arrow.slider__arrow_pref
+      button.slider__arrow.slider__arrow_next
   .book-list
     .tabs
       ul.tabs__list
