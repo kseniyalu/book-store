@@ -1,5 +1,6 @@
 .main-navigation-footer {
-  display: inline-block;
+  order: 1;
+  margin-left: auto;
 
   a {
     text-decoration: none;
@@ -8,6 +9,8 @@
 
   &__list {
     display: flex;
+    margin: 0;
+    padding: 0;
   }
 
   &__item {
@@ -17,12 +20,11 @@
     font-weight: 700;
     text-transform: lowercase;
     margin: 0;
-    margin-right: 50px;
 
     &:hover {
       a {
         color: $main-color;
-        transition: 0.5s;
+        transition: 0.3s;
       }
     }
   }
@@ -32,6 +34,7 @@
 
     @media (min-width: $screen-s) {
       display: block;
+      margin-right: 50px;
     }
   }
 
@@ -40,10 +43,12 @@
 
     @media (min-width: $screen-s) {
       display: block;
+      margin-right: 50px;
     }
   }
 
   &__item_contacts {
+
   }
 
 

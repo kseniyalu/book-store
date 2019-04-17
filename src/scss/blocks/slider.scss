@@ -7,8 +7,6 @@
     display: flex;
   }
 
-  &__container {}
-
   &__description {
     font-size: $font-size;
     margin-bottom: 24px;
@@ -23,6 +21,7 @@
     position: relative;
     z-index: 1;
     padding: 20px;
+    margin: auto;
 
     &:before {
       content: '';
@@ -34,7 +33,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      border: 10px solid #ff0;
+      border: 8px solid $gray-lighten;
 
       @media (min-width: $screen-l) {
         right: auto;

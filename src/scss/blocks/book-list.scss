@@ -1,15 +1,11 @@
 .book-list {
 
-  &__item {
-    display: flex;
-  }
-
   &__container {
     margin: auto;
-    display: grid;
-    grid-row-gap: 30px;
 
     @media (min-width: $screen-s) {
+      display: grid;
+      grid-row-gap: 30px;
       max-width: 640px;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -18,11 +14,12 @@
     }
 
     @media (min-width: $screen-l) {
+      display: grid;
+      grid-row-gap: 30px;
       max-width: 1200px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-column-gap: 80px;
     }
   }
-
 }

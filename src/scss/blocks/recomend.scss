@@ -25,7 +25,8 @@
       max-width: 1200px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 40px;
+      grid-template-rows: repeat(4, 100px);
+      grid-column-gap: 20px;
       grid-template-areas:
       "blog bestBook bestBook"
       "photoes bestBook bestBook"
