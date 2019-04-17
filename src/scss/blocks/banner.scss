@@ -8,23 +8,42 @@
   overflow: hidden;
   color: #fff;
 
+  &:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+
   &__vector {
     width: 99px;
     height: 12px;
     background-color: #fff;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 40px;
     z-index: 999;
+
+    @media (min-width: $screen-s) {
+      margin-top: 70px;
+    }
   }
 
   &__title {
-    font-size: $font-size-xl;
+    font-size: $font-size-m;
     font-weight: 700;
     text-align: center;
-    margin: 41px 0 21px 0;
+    margin: 40px 0 20px 0;
+
+    @media (min-width: $screen-s) {
+      font-size: $font-size-l;
+    }
+
+    @media (min-width: $screen-l) {
+      font-size: $font-size-xl;
+    }
   }
 
   &__description {
+    max-width: 80%;
+    margin: auto;
     font-size: $font-size;
     text-align: center;
   }

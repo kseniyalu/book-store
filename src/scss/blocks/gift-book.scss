@@ -1,0 +1,58 @@
+.gift-book {
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 225px;
+    max-height: 600px;
+
+    @media (min-width: $screen-s) {
+      max-width: 270px;
+
+      &:hover {
+
+        .mini-card__price {
+          color: $main-color;
+          transition: 0.5s;
+        }
+
+        .mini-card__img {
+          box-shadow: 0 12px 36px 4px rgba(244,212,228,1);
+          transition: 0.5s;
+        }
+      }
+    }
+
+    @media (min-width: $screen-l) {
+      max-width: 290px;
+    }
+
+  }
+
+  &__img {
+    width: 100%;
+    background-size: cover;
+  }
+
+  &__title {
+    font-size: $font-size-m;
+    // overflow: hidden;
+    text-decoration: none;
+  }
+
+  &__description {
+    font-size: $font-size;
+    // overflow: hidden;
+  }
+
+  &__price {
+    font-size: $font-size;
+    font-weight: bold;
+    margin-top: auto;
+  }
+}

@@ -1,3 +1,15 @@
 .page-footer {
 
+  &__open-time {
+    display: none;
+
+    @media (min-width: $screen-s) {
+      color: $gray;
+      font-size: $font-size-s;
+    }
+  }
+
+  &__logo {
+
+  }
 }

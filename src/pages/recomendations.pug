@@ -7,36 +7,39 @@ block meta
 block content
   section.recomend
     h1.recomend__title Наши рекомендации
-    .recomend__blog
-      h2.recomend__subtitle Новая статься в блоге
-      p.recomend__description Посмотрите, как чтение книг меняет вопсриятие человека
-      a.recomend__link(href='blog-article.html') Читать статью
+    .recomend__container
+      .recmend__wrapper
+        .recomend__blog
+          h2.recomend__subtitle Новая статься в блоге
+          p.recomend__description Посмотрите, как чтение книг меняет вопсриятие человека
+          a.recomend__link(href='blog-article.html') Читать статью
 
-    a.recomend__best-book(href='rec2.html')
-      h2.recomend__title-banner Книга осени
-      p.recomend__description-banner Проголосуй за лучшую книгу этой осени
+        .recomend__banner.recomend__banner_best-book
+          //- img.recomend__best-book-img(src='img/recomendation-banner1.jpg', alt='Книга осени')
+          h2.recomend__title-banner Книга осени
+          p.recomend__description-banner Проголосуй за лучшую книгу этой осени
 
-    a.recomend__photoes(href='rec3.html')
-      img.recomend__back(src='img/recomend-third-bg.jpg', alt='Подборки ваших фотографий')
-      h2.recomend__title-banner Наши подборки ваших лучших фотографий у нас
+        .recomend__banner.recomend__banner_photoes
+          //- img.recomend__back(src='img/recomendation-banner2.jpg', alt='Подборки ваших фотографий')
+          h2.recomend__title-banner Наши подборки ваших лучших фотографий у нас
 
-    .recomend__vout
-      h2.recomend__subtitle Нам важно ваше мнение
-      p.recomend__description Ставьте пальцы вверх, мы хотим знать ваше мнение
-      button.btn Проголосовать
+        .recomend__vout
+          h2.recomend__subtitle Нам важно ваше мнение
+          p.recomend__description Ставьте пальцы вверх, мы хотим знать ваше мнение
+          button.btn.recomend__btn Проголосовать
 
-    a.recomend__kids-books(href='rec5.html')
-      h2.recomend__subtitle.recomend__subtitle_inverse Книги для детей
-      p.recomend__description-inverse У нас появился новый раздел, в котором мы подбираем книги для юных читателей
+        .recomend__kids-books
+          h2.recomend__subtitle-inverse Книги для детей
+          p.recomend__description-inverse У нас появился новый раздел, в котором мы подбираем книги для юных читателей
 
-    a.recomend__old-books(href='rec6.html')
-      img.recomend__back(src='img/recomend-sixth-bg.jpg', alt='У вас есть старые книги?')
-      h2.recomend__title-banner У вас есть старые книги?
-      p.recomend__description-banner Приносите их нам и обменивайте на новые
+        .recomend__banner.recomend__banner_old-books
+          //- img.recomend__back(src='img/recomendation-banner3.jpg', alt='У вас есть старые книги?')
+          h2.recomend__title-banner У вас есть старые книги?
+          p.recomend__description-banner Приносите их нам и обменивайте на новые
 
-    a.gift-book
-      h2.gift-book__title Книга в подарок!
-      p.gift-book__description При вашем новом заказе мы подарим вам книгу.
-      +mini-card( 'Путеводитель по лжи', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
+      .gift-book
+        h2.gift-book__title Книга в подарок!
+        p.gift-book__description При вашем новом заказе мы подарим вам книгу.
+        +mini-card( 'Путеводитель по лжи', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
 
   +banner

@@ -1,0 +1,30 @@
+.main-navigation-footer {
+  display: inline-block;
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  &__list {
+    display: flex;
+    margin-right: 50px;
+  }
+
+  &__item {
+    list-style-type: none;
+    font-size: $font-size;
+    font-size: $font-size-s;
+    font-weight: 700;
+    text-transform: lowercase;
+
+    &:hover {
+      a {
+        color: $main-color;
+        transition: 0.5s;
+      }
+    }
+  }
+
+
+}

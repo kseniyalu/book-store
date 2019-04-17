@@ -1,0 +1,132 @@
+.recomend {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  &__container {
+
+    @media (min-width: $screen-s) {
+      display: flex;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-row-gap: 30px;
+
+    // @media (min-width: $screen-s) {
+    //   max-width: 640px;
+    //   display: grid;
+    //   grid-template-columns: 1fr 1fr;
+    //   grid-column-gap: 40px;
+    //   grid-row-gap: 60px;
+    // }
+
+    @media (min-width: $screen-l) {
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 40px;
+      grid-template-areas:
+      "blog bestBook bestBook"
+      "photoes bestBook bestBook"
+      "photoes vout kidsBooks"
+      "oldBooks oldBooks oldBooks";
+    }
+  }
+
+  &__blog {
+    grid-area: blog;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0 rgba(64,66,172,0.35);
+    padding: 10px 30px 25px;
+  }
+
+  &__subtitle {
+    font-size: $font-size;
+    font-weight: 700;
+  }
+
+  &__description {
+    font-size: $font-size;
+  }
+
+  &__link {
+    font-size: $font-size;
+    color: $link-color;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  &__vout {
+    grid-area: vout;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0 rgba(64,66,172,0.35);
+    padding: 10px 30px 15px;
+  }
+
+  &__btn {
+    width: 100%;
+    height: 50px;
+    font-size: $font-size-s;
+    font-weight: 700;
+  }
+
+  &__kids-books {
+    grid-area: kidsBooks;
+    background-color: $main-color;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0 rgba(64,66,172,0.35);
+    padding: 10px 30px 15px;
+    color: #fff;
+  }
+
+  &__subtitle-inverse {
+    font-size: $font-size;
+    font-weight: 700;
+  }
+
+  &__description-inverse {
+    font-size: $font-size;
+  }
+
+  &__banner {
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0 rgba(64,66,172,0.35);
+    padding: 10px 30px 15px;
+    background-color: $main-color;
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+
+    &_best-book {
+      grid-area: bestBook;
+      background-image: url('../img/recomendation-banner1.jpg');
+    }
+
+    &_photoes {
+      grid-area: photoes;
+      background-image: url('../img/recomendation-banner2.jpg');
+    }
+
+    &_old-books {
+      grid-area: oldBooks;
+      background-image: url('../img/recomendation-banner3.jpg');
+    }
+  }
+
+  &__subtitle-banner {
+    font-size: $font-size-m;
+  }
+
+  &__description-banner {
+    font-size: $font-size;
+  }
+
+  &__best-book-img {
+    width: 100%;
+    height: 100%;
+  }
+
+}
