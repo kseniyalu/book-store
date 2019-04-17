@@ -8,7 +8,6 @@
 
   &__list {
     display: flex;
-    margin-right: 50px;
   }
 
   &__item {
@@ -17,6 +16,8 @@
     font-size: $font-size-s;
     font-weight: 700;
     text-transform: lowercase;
+    margin: 0;
+    margin-right: 50px;
 
     &:hover {
       a {
@@ -24,6 +25,25 @@
         transition: 0.5s;
       }
     }
+  }
+
+  &__item-books {
+    display: none;
+
+    @media (min-width: $screen-s) {
+      display: block;
+    }
+  }
+
+  &__item-recomend {
+    display: none;
+
+    @media (min-width: $screen-s) {
+      display: block;
+    }
+  }
+
+  &__item_contacts {
   }
 
 
