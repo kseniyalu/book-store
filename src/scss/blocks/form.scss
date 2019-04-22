@@ -1,3 +1,77 @@
 .form {
+  position: relative;
+  min-width: 300px;
+  margin: auto;
+  margin-bottom: 40px;
+  border-right: 8px solid $gray-lighten;
+  border-left: 8px solid $gray-lighten;
 
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 8px;
+      background-color: $gray-lighten;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 8px;
+      background-color: $gray-lighten;
+    }
+
+  @media (min-width: $screen-s) {
+    max-width: 740px;
+  }
+
+  @media (min-width: $screen-l) {
+    max-width: 1200px;
+  }
+
+
+  &__wrapper {
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50px;
+      height: 8px;
+      background-color: $gray-lighten;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40%;
+      height: 8px;
+      background-color: $gray-lighten;
+    }
+  }
+
+
+  &__title {
+    padding: 30px 15px 0;
+  }
+
+  &__subtitle {
+    color: $gray-dark;
+    padding: 0 15px;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px 15px;
+  }
 }

@@ -1,0 +1,68 @@
+.book {
+
+  &__container {
+    margin: auto;
+
+    @media (min-width: 768px) {
+      max-width: 760px;
+      display: grid;
+      grid-template-columns: 3fr 5fr;
+      grid-column-gap: 40px;
+      grid-template-areas:
+      "hdr prev"
+      "info prev"
+      "descr descr";
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 1160px;
+      display: grid;
+      grid-template-columns: 3fr 5fr;
+      grid-column-gap: 40px;
+      grid-template-areas:
+      "prev hdr"
+      "prev info"
+      "descr descr";
+    }
+
+    &__header {
+      grid-area: hdr;
+      background-color: #B8B8B8;
+    }
+
+    &__subtitle {
+
+    }
+
+    &__title {
+
+    }
+
+    &__lead {
+
+    }
+
+    &__preview {
+      grid-area: prev;
+      background-color: #F3B7B7;
+    }
+
+    &__info {
+      grid-area: info;
+      background-color: #F7F7B5;
+    }
+
+    &__description {
+      grid-area: descr;
+      background-color: #BCD9F9;
+    }
+
+  }
+
+
+
+  & > * {
+    padding: 0.5em;
+    font-weight: 700;
+  }
+}

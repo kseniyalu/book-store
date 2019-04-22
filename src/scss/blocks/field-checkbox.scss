@@ -1,6 +1,11 @@
 .field-checkbox {
   display: block;
   position: relative;
+  margin-top: 30px;
+
+  @media (min-width: $screen-l) {
+  order: 2;
+  }
 
   &__pseudo-checkbox {
 
@@ -56,10 +61,11 @@
   &__text {
     display: block;
     padding-left: 28px;
-    font-style: $font-size-m;
-    line-height: 1.714em;
-  }
+    font-style: $font-size-s;
+    line-height: 1.6em;
 
-  &__msg {
+    a {
+      text-decoration: none;
+    }
   }
 }

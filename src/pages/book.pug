@@ -11,13 +11,13 @@ block content
         p.book__subtitle Эдди Юн
         h1.book__title Суперпотребители
         p.book__lead Кто это и почему они так важны для вашего бизнеса
-      .book__cover
-        img.book__cover-img(src='img/books/book-superpotrebiteli.jpg', alt='Суперпотребители')
       .book__preview
-        a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители1')]
-        a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители2')]
-        a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители3')]
-      .book__details
+        img.book__cover-img(src='img/books/book-superpotrebiteli.jpg', alt='Суперпотребители')
+        .book__pages
+          a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители1')]
+          a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители2')]
+          a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители3')]
+      .book__info
         table.book__table
           tr
             td.book__td-item Артикул
@@ -31,15 +31,15 @@ block content
           tr
             td.book__td-item Цена
             td.book__td-price #[strong 800 Р]
-      form.book__buy
-        .field-text.field-text_inpunt-bg-gray
-          input.fieldt-text__input
-          span.fieldt-text__input-descr шт.
-        button.btn Добавить в корзину
-        .book__like
-          svg(width='24', height='24')
-          span.book__like-subtitle 20 людям понравилась эта книга
-      section.book__description
+        form.book__buy
+          .field-text.field-text_inpunt-bg-gray
+            input.fieldt-text__input
+            span.fieldt-text__input-descr шт.
+          button.btn Добавить в корзину
+          .book__like
+            svg(width='24', height='24')
+            span.book__like-subtitle 20 людям понравилась эта книга
+      .book__description
         h2.book__description-title Краткое описание
         .book__description-text
           p В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.

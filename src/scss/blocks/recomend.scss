@@ -1,32 +1,78 @@
 .recomend {
-  margin-left: 20px;
-  margin-right: 20px;
+  max-width: 300px;
+  margin: auto;
+
+  @media (min-width: $screen-s) {
+    max-width: 728px;
+    margin: auto;
+  }
+
+  @media (min-width: $screen-m) {
+    max-width: 952px;
+    margin: auto;
+  }
+
+  @media (min-width: $screen-l) {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
 
   &__container {
+    margin-bottom: 10%;
 
     @media (min-width: $screen-s) {
       display: flex;
     }
+
+    @media (min-width: $screen-l) {
+      display: flex;
+    }
+  }
+
+  &__gift-book {
+    margin-left: 30px;
+
+    &__title {
+      font-size: $font-size;
+      font-weight: 700;
+    }
+
+    &__description {
+      font-size: $font-size;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
   }
 
   &__wrapper {
-    display: grid;
-    grid-row-gap: 30px;
 
-    // @media (min-width: $screen-s) {
-    //   max-width: 640px;
-    //   display: grid;
-    //   grid-template-columns: 1fr 1fr;
-    //   grid-column-gap: 40px;
-    //   grid-row-gap: 60px;
-    // }
+    @media (min-width: $screen-s) {
+      display: grid;
+      grid-row-gap: 15px;
+      max-width: 640px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, 240px);
+      grid-column-gap: 15px;
+      grid-template-areas:
+      "blog bestBook"
+      "photoes vout"
+      "photoes kidsBooks"
+      "oldBooks oldBooks";
+    }
 
     @media (min-width: $screen-l) {
+      display: grid;
+      grid-row-gap: 15px;
       max-width: 1200px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: repeat(4, 100px);
-      grid-column-gap: 20px;
+      grid-template-rows: repeat(4, 190px);
+      grid-column-gap: 15px;
       grid-template-areas:
       "blog bestBook bestBook"
       "photoes bestBook bestBook"
@@ -37,10 +83,19 @@
 
   &__blog {
     grid-area: blog;
+    margin-bottom: 30px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 4px 10px 0 rgba(64,66,172,0.35);
-    padding: 10px 30px 25px;
+    padding: 10px 20px 25px;
+
+    @media (min-width: $screen-s) {
+      margin-bottom: 0px;
+    }
+
+    @media (min-width: $screen-l) {
+      margin-bottom: 0px;
+    }
   }
 
   &__subtitle {
@@ -50,6 +105,7 @@
 
   &__description {
     font-size: $font-size;
+    line-height: 1.7;
   }
 
   &__link {
@@ -61,10 +117,19 @@
 
   &__vout {
     grid-area: vout;
+    margin-bottom: 30px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 4px 10px 0 rgba(64,66,172,0.35);
-    padding: 10px 30px 15px;
+    padding: 10px 20px 15px;
+
+    @media (min-width: $screen-s) {
+      margin-bottom: 0px;
+    }
+
+    @media (min-width: $screen-l) {
+      margin-bottom: 0px;
+    }
   }
 
   &__btn {
@@ -76,11 +141,20 @@
 
   &__kids-books {
     grid-area: kidsBooks;
+    margin-bottom: 30px;
     background-color: $main-color;
     border-radius: 5px;
     box-shadow: 0 4px 10px 0 rgba(64,66,172,0.35);
-    padding: 10px 30px 15px;
+    padding: 10px 20px 15px;
     color: #fff;
+
+    @media (min-width: $screen-s) {
+      margin-bottom: 0px;
+    }
+
+    @media (min-width: $screen-l) {
+      margin-bottom: 0px;
+    }
   }
 
   &__subtitle-inverse {
@@ -90,10 +164,13 @@
 
   &__description-inverse {
     font-size: $font-size;
+    line-height: 1.7;
   }
 
   &__banner {
+    display: flex;
     border-radius: 5px;
+    margin-bottom: 30px;
     box-shadow: 0 4px 10px 0 rgba(64,66,172,0.35);
     padding: 10px 30px 15px;
     background-color: $main-color;
@@ -103,17 +180,39 @@
 
     &_best-book {
       grid-area: bestBook;
-      background-image: url('../img/recomendation-banner1.jpg');
+      background-image: url('../img/autumn-book.jpg');
+      display: block;
     }
 
     &_photoes {
       grid-area: photoes;
-      background-image: url('../img/recomendation-banner2.jpg');
+      background-image: url('../img/photos-compilation.jpg');
     }
 
     &_old-books {
       grid-area: oldBooks;
-      background-image: url('../img/recomendation-banner3.jpg');
+      background-image: url('../img/old-books.jpg');
+      display: block;
+    }
+
+    @media (min-width: $screen-s) {
+      margin-bottom: 0px;
+    }
+
+    @media (min-width: $screen-l) {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__title-banner {
+    align-self: center;
+
+    &_best-book {
+      align-self: flex-start;
+    }
+
+    &_old-books {
+      margin-top: 40px;
     }
   }
 

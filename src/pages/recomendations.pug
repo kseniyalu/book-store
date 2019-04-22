@@ -14,14 +14,12 @@ block content
           p.recomend__description Посмотрите, как чтение книг меняет вопсриятие человека
           a.recomend__link(href='blog-article.html') Читать статью
 
-        a.recomend__banner.recomend__banner_best-book(href='')
-          //- img.recomend__best-book-img(src='img/recomendation-banner1.jpg', alt='Книга осени')
-          h2.recomend__title-banner Книга осени
+        a.recomend__banner.recomend__banner_best-book(href='best-book.html')
+          h2.recomend__title-banner.recomend__title-banner_best-book Книга осени
           p.recomend__description-banner Проголосуй за лучшую книгу этой осени
 
-        .recomend__banner.recomend__banner_photoes
-          //- img.recomend__back(src='img/recomendation-banner2.jpg', alt='Подборки ваших фотографий')
-          h2.recomend__title-banner Наши подборки ваших лучших фотографий у нас
+        a.recomend__banner.recomend__banner_photoes(href='photoes.html')
+          h2.recomend__title-banner.recomend__title-banner_photoes Наши подборки ваших лучших фотографий у нас
 
         .recomend__vout
           h2.recomend__subtitle Нам важно ваше мнение
@@ -32,14 +30,13 @@ block content
           h2.recomend__subtitle-inverse Книги для детей
           p.recomend__description-inverse У нас появился новый раздел, в котором мы подбираем книги для юных читателей
 
-        .recomend__banner.recomend__banner_old-books
-          //- img.recomend__back(src='img/recomendation-banner3.jpg', alt='У вас есть старые книги?')
-          h2.recomend__title-banner У вас есть старые книги?
+        a.recomend__banner.recomend__banner_old-books(href='old-books.html')
+          h2.recomend__title-banner_old-books У вас есть старые книги?
           p.recomend__description-banner Приносите их нам и обменивайте на новые
 
-      .gift-book
+      .recomend__gift-book
         h2.gift-book__title Книга в подарок!
         p.gift-book__description При вашем новом заказе мы подарим вам книгу.
-        +mini-card( 'Путеводитель по лжи', 'book.html', 'img/books/lat-logic.jpg', 'Описание', '')
+        +mini-card( 'Путеводитель по лжи', 'book.html', 'img/books/book-putevoditel-po-lzhi.jpg', 'Критическое мышление в эпоху постправды', '')
 
-  +banner
+    +banner
