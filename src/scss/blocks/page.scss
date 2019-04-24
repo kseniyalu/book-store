@@ -13,14 +13,14 @@
     position: relative;
     margin: auto;
 
-    &:before {
-      content: '';
-      width: 100%;
-      height: 490px;
-      position: absolute;
-      bottom: 310px;
-      background-color: #f4d4e4;
-    }
+    // &:before {
+    //   content: '';
+    //   width: 100%;
+    //   height: 490px;
+    //   position: absolute;
+    //   bottom: 310px;
+    //   background-color: #f4d4e4;
+    // }
   }
 
   &__footer-wrapper {}
