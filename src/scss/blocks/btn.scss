@@ -13,9 +13,11 @@
   cursor: pointer;
   user-select: none;
   transition: all 0.3s;
+  font-family: Montserrat, sans-serif;
 
   &:hover,
   &:focus {
-    // background-color: pink;
+    background-color: $main-color;
+    color: #fff;
   }
 }

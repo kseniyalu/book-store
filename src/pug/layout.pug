@@ -24,12 +24,11 @@ html(class='page  no-js', lang='ru')
 
         header.page-header
           .page-header__container
-            //Добавить ссылку на логотип
-            img.page-header__logo(src='img/logo.jpg', alt='BookStore')
+            a(href='index.html') #[img.page-header__logo(src='img/logo.svg', alt='BookStore')]
             p.page-header__open-time с 9:00 до 19:00
             nav.main-navigation
-              button.burger.main-navigation__burger(area-label='Показать меню')
-                span
+              //- button.main-navigation__burger(area-label='Показать меню')
+              //-   span.main-navigation__icon
               ul.main-navigation__list
                 li.main-navigation__item
                   a(href='index.html') Книги
@@ -42,7 +41,7 @@ html(class='page  no-js', lang='ru')
                     svg(width='24', height='24')
                     span.main-navigation__phone-number +7 800 500-80-2
             a.page-header__cart(href='')
-              svg(width='24', height='24')
+              //- svg(width='24', height='24')
 
         block content
           p Cодержимое
@@ -50,8 +49,7 @@ html(class='page  no-js', lang='ru')
       .page__footer-wrapper
         footer.page-footer
           .page-footer__container
-            //Добавить ссылку на логотип
-            img.page-footer__logo(src='img/logo.svg', alt='BookStore')
+            a(href='index.html') #[img.page-footer__logo(src='img/logo.svg', alt='BookStore')]
             nav.main-navigation-footer
               ul.main-navigation-footer__list
                 li.main-navigation-footer__item.main-navigation-footer__item-books

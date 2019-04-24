@@ -7,72 +7,70 @@ block meta
 block content
   article.book
     .book__container
-      header.book__header
+      header.book__info
         p.book__subtitle Эдди Юн
         h1.book__title Суперпотребители
         p.book__lead Кто это и почему они так важны для вашего бизнеса
       .book__preview
         img.book__cover-img(src='img/books/book-superpotrebiteli.jpg', alt='Суперпотребители')
-        .book__pages
-          a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители1')]
-          a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители2')]
-          a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители3')]
-      .book__info
-        table.book__table
-          tr
-            td.book__td-item Артикул
-            td.book__td-value 1090763
-          tr
-            td.book__td-item В наличии
-            td.book__td-value 5 шт.
-          tr
-            td.book__td-item Издательство
-            td.book__td-value Издал
-          tr
-            td.book__td-item Цена
-            td.book__td-price #[strong 800 Р]
+      .book__pages-wrap
+        a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители1')]
+        a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители2')]
+        a(href='img/book-example.jpg') #[img.book__page(src='img/book-example.jpg', alt='Суперпотребители3')]
+      table.book__table
+        tr.book__row
+          td.book__td-item Артикул
+          td.book__td-value 1090763
+        tr.book__row
+          td.book__td-item В наличии
+          td.book__td-value 5 шт.
+        tr.book__row
+          td.book__td-item Издательство
+          td.book__td-value Издал
+        tr.book__row
+          td.book__td-item Цена
+          td.book__td-price #[strong 800 ₽]
+      .book__buy
         form.book__buy
-          .field-text.field-text_inpunt-bg-gray
-            input.fieldt-text__input
-            span.fieldt-text__input-descr шт.
-          button.btn Добавить в корзину
-          .book__like
-            svg(width='24', height='24')
-            span.book__like-subtitle 20 людям понравилась эта книга
+          .book__buy-wrapper
+            input.field-text__input.book__input-quantity
+            span.book__input-descr шт.
+            button.btn.book__btn Добавить в корзину
+        .book__like
+          svg(width='24', height='24')
+          span.book__like-subtitle 20 людям понравилась эта книга
       .book__description
         h2.book__description-title Краткое описание
         .book__description-text
           p В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
           p Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
-        button.btn.book__button-more Показать полностью
-        .book__description-hidden
-          p В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
+        button.book__button-more Показать полностью
         .book__social
-          button.btn-social
+          button.book__btn-social
             svg(width='16', height='16')
             span 15
-          button.btn-social
+          button.book__btn-social
             svg(width='16', height='16')
             span 4
-          button.btn-social
+          button.book__btn-social
             svg(width='16', height='16')
             span 150
-          button.btn-social
+          button.book__btn-social
             svg(width='16', height='16')
             span 0
 
-  section.book-shelf
-    header.book-shelf__header
-      h2.book-shelf__title Книги по тематике
-      a(href='new.html') Больше книг по тематике
-    .book-shelf__list
-      .book-shelf__item
-        +mini-card( 'Латеральная логика', 'book.html', 'img/books/book-lateralnaya-logika.jpg', 'Головоломный путь к нестандартному мышлению')
-      .book-shelf__item
-        +mini-card( 'Путеводитель по лжи', 'book.html', 'img/books/book-putevoditel-po-lzhi.jpg', 'Критическое мышление в эпоху постправды')
-      .book-shelf__item
-        +mini-card( 'Дао физики', 'book.html', 'img/books/book-dao-fiziki.jpg', 'Исследование параллелей между современной физикой и восточной философией')
-      .book-shelf__item
-        +mini-card( 'Не очевидно', 'book.html', 'img/books/book-ne-ochevidno.jpg', 'Как выявлять тренды раньше других')
+    section.book-shelf
+      header.book-shelf__header
+        h2.book-shelf__title Наши новинки
+        a.book-self__link(href='new.html') Все новинки
+      .book-shelf__list
+        .book-shelf__item
+          +mini-card( 'Латеральная логика', 'book.html', 'img/books/book-lateralnaya-logika.jpg', 'Головоломный путь к нестандартному мышлению')
+        .book-shelf__item
+          +mini-card( 'Путеводитель по лжи', 'book.html', 'img/books/book-putevoditel-po-lzhi.jpg', 'Критическое мышление в эпоху постправды')
+        .book-shelf__item
+          +mini-card( 'Дао физики', 'book.html', 'img/books/book-dao-fiziki.jpg', 'Исследование параллелей между современной физикой и восточной философией')
+        .book-shelf__item
+          +mini-card( 'Не очевидно', 'book.html', 'img/books/book-ne-ochevidno.jpg', 'Как выявлять тренды раньше других')
 
   +banner

@@ -3,6 +3,7 @@
   display: block;
   position: relative;
   padding: 18px 0 0;
+  font-family: Montserrat, sans-serif;
 
   &__input {
     display: inline-block;
@@ -28,6 +29,7 @@
       color: $gray;
       opacity: 1;
     }
+
   }
 
   &__message {

@@ -1,6 +1,7 @@
 .recomend {
   max-width: 300px;
   margin: auto;
+  font-family: Montserrat, sans-serif;
 
   @media (min-width: $screen-s) {
     max-width: 728px;
@@ -54,7 +55,6 @@
       display: grid;
       grid-row-gap: 15px;
       max-width: 640px;
-      display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(4, 240px);
       grid-column-gap: 15px;
@@ -69,7 +69,6 @@
       display: grid;
       grid-row-gap: 15px;
       max-width: 1200px;
-      display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: repeat(4, 190px);
       grid-column-gap: 15px;
